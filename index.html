@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of an Information Science Engineering student and aspiring software developer." />
+  <title>Guru H | Developer Portfolio</title>
+  <style>
+    :root {
+      --bg: #090812; --panel: #121020; --panel2: #17142a;
+      --text: #f5f2ff; --muted: #aaa4c0; --purple: #a78bfa;
+      --purple2: #7c3aed; --line: rgba(196,181,253,.16);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif;
+      background: radial-gradient(ellipse at 80% 0%, rgba(124,58,237,.18), transparent 36%), var(--bg);
+      color: var(--text); line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1080px, 90%); margin: auto; }
+    header { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(16px); background: rgba(9,8,18,.82); border-bottom: 1px solid var(--line); }
+    nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-weight: 800; letter-spacing: -.04em; font-size: 1.15rem; }
+    .brand span { color: var(--purple); }
+    .navlinks { display: flex; gap: 24px; color: var(--muted); font-size: .92rem; }
+    .navlinks a:hover { color: var(--purple); }
+    .hero { min-height: 590px; display: grid; align-content: center; padding: 90px 0 75px; }
+    .eyebrow { color: var(--purple); text-transform: uppercase; letter-spacing: .18em; font-size: .78rem; font-weight: 800; }
+    h1 { font-size: clamp(2.8rem, 7vw, 5.5rem); line-height: 1.04; letter-spacing: -.065em; margin: 18px 0; max-width: 850px; }
+    h1 span { color: var(--purple); }
+    .intro { max-width: 650px; color: var(--muted); font-size: 1.12rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 30px; }
+    .btn { padding: 12px 19px; border-radius: 999px; font-weight: 700; border: 1px solid var(--line); transition: .2s; }
+    .btn.primary { background: linear-gradient(110deg, var(--purple2), #9b6cff); border: 0; color: white; }
+    .btn:hover { transform: translateY(-2px); }
+    section { padding: 70px 0; }
+    .section-head { margin-bottom: 28px; }
+    .section-head h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: -.04em; }
+    .section-head p { color: var(--muted); margin-top: 7px; }
+    .about-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 22px; }
+    .card { background: linear-gradient(145deg, rgba(23,20,42,.95), rgba(16,14,29,.95)); border: 1px solid var(--line); border-radius: 20px; padding: 26px; }
+    .card p { color: var(--muted); }
+    .quickfacts { display: grid; gap: 14px; }
+    .fact strong { display: block; color: var(--purple); font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 3px; }
+    .fact span { color: var(--text); }
+    .skills { display: flex; flex-wrap: wrap; gap: 11px; }
+    .chip { padding: 9px 15px; border: 1px solid rgba(167,139,250,.28); background: rgba(124,58,237,.1); color: #ddd2ff; border-radius: 999px; font-size: .92rem; }
+    .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .project { min-height: 220px; display: flex; flex-direction: column; }
+    .project .tag { color: var(--purple); font-size: .78rem; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; }
+    .project h3 { font-size: 1.3rem; margin: 10px 0; }
+    .project p { flex: 1; }
+    .project a { color: var(--purple); font-weight: 700; margin-top: 18px; }
+    .contact-box { display: flex; align-items: center; justify-content: space-between; gap: 25px; flex-wrap: wrap; }
+    footer { border-top: 1px solid var(--line); padding: 25px 0; color: var(--muted); font-size: .9rem; }
+    .socials { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 15px; }
+    .socials a { color: var(--purple); font-weight: 700; }
+    @media (max-width: 700px) {
+      .navlinks { gap: 12px; font-size: .8rem; }
+      .about-grid, .projects { grid-template-columns: 1fr; }
+      .hero { min-height: 520px; }
+      section { padding: 55px 0; }
+    }
+    @media (max-width: 430px) {
+      nav { align-items: flex-start; flex-direction: column; padding: 15px 0; }
+      .navlinks { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap">
+      <a class="brand" href="#home">PORTFOLIO<span>.</span></a>
+      <div class="navlinks">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero wrap" id="home">
+      <p class="eyebrow">Information Science Engineering Student</p>
+      <h1>Hi, I'm <span>Guru H.</span><br />I build things for the web.</h1>
+      <p class="intro">I'm an engineering student at Gogte Institute of Technology, interested in software development, problem-solving and building practical projects. I'm continuously learning and turning ideas into working solutions.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">Explore my work ↓</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <section class="wrap" id="about">
+      <div class="section-head"><p class="eyebrow">A little about me</p><h2>Curious mind. Practical builder.</h2></div>
+      <div class="about-grid">
+        <div class="card">
+          <p>I'm pursuing a B.E. in Information Science at Gogte Institute of Technology. I enjoy learning how software works, experimenting with new technologies and collaborating on projects. My goal is to strengthen my development skills by building useful, real-world applications.</p>
+        </div>
+        <div class="card quickfacts">
+          <div class="fact"><strong>Education</strong><span>B.E. – Information Science</span></div>
+          <div class="fact"><strong>Institute</strong><span>Gogte Institute of Technology</span></div>
+          <div class="fact"><strong>Based in</strong><span>Belagavi, Karnataka, India</span></div>
+          <div class="fact"><strong>Currently focused on</strong><span>Programming & project development</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" id="skills">
+      <div class="section-head"><p class="eyebrow">What I work with</p><h2>Technical skills</h2><p>Edit this list to include only technologies you can confidently discuss.</p></div>
+      <div class="skills">
+        <span class="chip">Python</span><span class="chip">C</span><span class="chip">HTML</span>
+        <span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">SQL</span>
+        <span class="chip">Git & GitHub</span><span class="chip">Problem Solving</span>
+      </div>
+    </section>
+
+    <section class="wrap" id="projects">
+      <div class="section-head"><p class="eyebrow">Selected work</p><h2>Projects</h2><p>Add your GitHub repository links to each project when they are ready.</p></div>
+      <div class="projects">
+        <article class="card project">
+          <span class="tag">Python · Database</span>
+          <h3>Banking System</h3>
+          <p>A learning project focused on core banking operations, Python fundamentals, functions, file handling, exception handling and database connectivity.</p>
+          <a href="https://github.com/rohihampannavar-afk" target="_blank" rel="noreferrer">Add project repository ↗</a>
+        </article>
+        <article class="card project">
+          <span class="tag">Web Development</span>
+          <h3>Code Arena</h3>
+          <p>A mini-project exploring a coding-focused platform experience. Add a short description of its features, your role and the technologies you used.</p>
+          <a href="https://github.com/rohihampannavar-afk" target="_blank" rel="noreferrer">Add project repository ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap" id="contact">
+      <div class="card contact-box">
+        <div><p class="eyebrow">Let's connect</p><h2>Have an opportunity or an idea?</h2><p style="color:var(--muted);margin-top:8px">I'm open to learning, collaborating and connecting with fellow developers.</p>
+          <div class="socials">
+            <a href="mailto:rohihampannavar@gmail.com">Email</a>
+            <a href="https://github.com/rohihampannavar-afk" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://in.linkedin.com/in/guru-hampannavar-062671340" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+        <a class="btn primary" href="mailto:rohihampannavar@gmail.com">Say hello ↗</a>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">© <span id="year"></span> Guru H. Built with curiosity and a little bit of code.</div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
